@@ -13,7 +13,9 @@ taxonomy:
 ## Dust Attack
 2,100 sats
 
-Occasionally, attackers will send tiny fractions of bitcoin, around 500 sats, to random wallets. If the owner of the wallet does not notice, they may inadvertently include this piece of dust in their next transaction, leaking information about which bitcoin they own to the attacker. A dust attack is like placing a tracking device on a victim, allowing the attacker to view where the victim travels, or in this case, which bitcoin the victim owns. High quality wallets do their best to disallow users from including dust in their transactions in order to protect them from such attacks. If you notice tiny amounts of unsolicited bitcoin being sent to your wallet, you should not spend them as part of a transaction with other pieces of bitcoin. A dust attack only works if the victim spends the dust along with other UTXOs they own.
+悪意のある攻撃者は時折、任意のウォレットに500 sats程度の小さなビットコインを送信します。ウォレットの所有者が受信に気づかなかった場合、うっかり次の取引にこのダストを含めてしまうことで、どのビットコインを所有しているかという情報が攻撃者に漏れてしまう可能性があります。ダスト攻撃は被害者に追跡装置を仕掛けるような行為で、攻撃者は被害者がどこに移動させたか、この場合はどのビットコインを所有しているかを見ることができます。
+
+高品質のウォレットは、このようダスト攻撃からユーザーを守るため、トランザクションにダストを含めないように努めています。もしあなたのウォレットに微量の未承諾ビットコインが送られていることに気づいたら、それを他のビットコインとの取引の一部として使うべきではありません。ダスト攻撃は、被害者が所有している他のUTXOと一緒にダストを送金した場合にのみ機能します。
 
 ---
 コンテンツの著作権は [River Financial](https://river.com/) に帰属します。二次利用の可否は権利者にご確認ください。 / All rights reserved to River Financial.

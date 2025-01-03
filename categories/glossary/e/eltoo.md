@@ -14,19 +14,15 @@ taxonomy:
 ## Eltoo
 2,100 sats
 
-Eltoo—pronounced as “L2”—is a proposed upgrade to Bitcoin whose main goal is to improve layer two solutions, most importantly, the Lightning Network.
+Eltoo（エルトゥー）は、ビットコインのレイヤー2（L2）ソリューション、特にライトニングネットワークを改良することを目的とした提案です。この提案は、新しい署名ハッシュフラグ「SIGHASH_NOINPUT」をビットコインプロトコルに導入することを提案しています。このフラグ追加は、トランザクションの入力のtxid（トランザクションID）を指定しない署名を可能にします。
 
-Eltoo would implement these upgrades by introducing a new sighash flag called SIGHASH_NOINPUT to the Bitcoin protocol. The new sighash flag would allow a Bitcoin signature to commit to a transaction without specifying the txid of the input.
+txidを指定しないことでトランザクションに柔軟性が生まれます。つまり、先行トランザクションがブロックチェーンに公開される前に後続トランザクションに署名することが可能になります。
 
-Leaving the txid unspecified enables greater flexibility for transactions. It means descendant transactions can be signed before their ancestors are published to the blockchain.
+例えばアリスとボブがライトニング・チャネルを開設する場合、最初に資金提供トランザクションを署名し、ビットコインを2-of-2マルチシグアドレスに送金します。チャネルが開設されると、アリスとボブは一連の更新トランザクションを作成し、このマルチシグアドレスにある資金を消費します。チャネルを閉じる際には、決済トランザクションに署名する必要があります。
 
-For example, if Alice and Bob open a Lightning channel, they first sign a funding transaction, which sends bitcoin to a 2-of-2 multisig address. Once the channel is open, Alice and Bob make a series of update transactions, which spend the funds in the 2-of-2 multisig address. When Alice and Bob wish to close the channel, they must sign a settlement transaction to do so.
+Eltooを使用しない場合、各トランザクションは前のトランザクションが作成されて初めて署名可能です。しかしEltooを使用すると、資金提供トランザクションと同時に決済トランザクションに署名できます。これによってライトニングネットワークにおける二重支払い防止の仕組みが大幅に簡素化され、ライトニング・ネットワーク・ペナルティが不要になります。
 
-Without eltoo, each transaction in this process can only be signed once the previous one has been created. With eltoo, the settlement transaction can be signed at the same time as the funding transaction. This eliminates the need for the Lightning Network penalty, significantly simplifying the Lightning Network’s double spend protection.
-
-Key Fact: Because eltoo would introduce a new sighash flag, it is a change to the consensus protocol, and would require a soft fork.
-
-Because eltoo would introduce a new sighash flag, it is a change to the consensus protocol, and would require a soft fork.
+Eltooは新しい署名ハッシュフラグを導入するため、コンセンサスプロトコルの変更が必要です。そのため、Eltooの導入にはソフトフォークが必要です。
 
 ---
 コンテンツの著作権は [River Financial](https://river.com/) に帰属します。二次利用の可否は権利者にご確認ください。 / All rights reserved to River Financial.

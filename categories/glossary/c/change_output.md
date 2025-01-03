@@ -13,7 +13,7 @@ taxonomy:
 ## Change Output
 2,100 sats
 
-Bitcoin does not use accounts and balances. Instead, pieces of bitcoin, called UTXOs, are owned by individuals. These can be likened to physical bills in that when they are spent, they will usually require change to be given as their amount will almost never match the amount being paid. When a user creates a transaction, they select an input, a UTXO which they own, and create outputs. One output will go to the receiver’s address and the other output will be returned to the sender’s wallet, usually via a different address. The amount for this second output will be the change, which will amount to the sum of the inputs minus the amount spent in the first output and the transaction fee.
+ビットコインは、口座と残高の仕組みを使用しません。その代わりに、UTXO（未使用トランザクション出力）と呼ばれる単位で個人ごとに所有されています。これらは物理的な紙幣に似ており、その額面が支払額とぴったり一致することはほとんど無いため、一般的におつり（チェンジ・アウトプット）が必要になります。ユーザーがトランザクションを生成する際、自分が所有するUTXOを入力として選択し、2つの出力を生成します。一つの出力は受信者のアドレスに送られ、もう一つの出力は通常、送信者自身のウォレット内の別のアドレスに送られるおつりとして扱われます。このおつりの金額は、入力額の合計から受信者に送られる金額と取引手数料を差し引いた金額に相当します。
 
 ---
 コンテンツの著作権は [River Financial](https://river.com/) に帰属します。二次利用の可否は権利者にご確認ください。 / All rights reserved to River Financial.

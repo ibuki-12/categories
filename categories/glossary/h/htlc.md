@@ -13,7 +13,7 @@ taxonomy:
 ## Hashed Time Locked Contract (HTLC)
 2,100 sats
 
-A Time Locked Contract is a Bitcoin transaction which includes a timelock. This Bitcoin transaction is hashed to form a Hashed Time Locked Contract or HTLC, which is used mainly on the Lightning Network to allow Lightning payments to be routed across multiple nodes. Lightning routing allows two parties to trustlessly transact without a direct channel between them, using intermediary channels instead.
+HTLC（ハッシュタイムロックコントラクト）は、タイムロックを条件に含むビットコイントランザクションをハッシュ化（暗号処理）して生成する仕組みです。HTLCは主にライトニングネットワークで使用され、複数のノードを経由してライトニング決済をルーティング（取引データや決済を目的地まで中継する）することを可能にします。ライトニングルーティングを活用することで、直接的な支払いチャネルを持たない2者が、仲介ノードを経由して安全に取引を行うことができます。
 
 ---
 コンテンツの著作権は [River Financial](https://river.com/) に帰属します。二次利用の可否は権利者にご確認ください。 / All rights reserved to River Financial.

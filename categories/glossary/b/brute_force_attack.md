@@ -13,13 +13,14 @@ taxonomy:
 ## Brute Force Attack
 2,100 sats
 
-A brute force attack is a method of attempting to crack a password or decrypt data simply by guessing every possible password or decryption key. Brute force is highly inefficient, so a brute force attack is usually used as a last resort against a system which is impervious to other, more efficient attack methods.
+総当たり攻撃とは、パスワードや暗号化されたデータを解読する際に、考えられる全ての組み合わせを順番に試す手法です。この方法は非常に非効率的であるため、通常は他の効率的な手法が通用しない場合の最終手段として使用されます。
 
-Most systems that require passwords ask users to include uppercase letters, numbers, and special characters in order to decrease the efficacy of brute force attacks. This works because the greater the number of possible passwords, the harder it is to brute force.
+多くのシステムでは総当たり攻撃を防ぐため、ユーザーにパスワードに大文字、小文字、数字、特殊文字を含めるよう求めています。文字の種類を増やすことで、可能な組み合わせ数が増加し、攻撃の成功確率を大幅に下げることができます。
 
-The difficulty of a brute force can be calculated simply by taking the number of valid values—usually just one—and dividing it by the number of possible values. For example, a Bitcoin private key is usually 256 bits long. In order to brute force a specific Bitcoin private key, an attacker would have to guess each of the 256 bits correctly, and since each bit has two possible values (1 or 0), the attacker must guess from a range of 2^256 (roughly 10^77) possible values. Comparatively, a credit card number of 16 digits plus a 3 digit security code has a range of 10^19 possibilities. Brute forcing a social security number is even easier, since it is only 9 digits long. This is what makes Bitcoin vastly more secure than traditional financial systems.
+総当たり攻撃の難易度は、正解が1つである場合、その正解を見つけるために必要な試行回数で決まります。例えば、ビットコインの秘密鍵は256ビットの長さを持ちます。この場合、攻撃者は256ビットすべてを正しく推測する必要があり、各ビットには0または1の2通りの値しかないため、可能な組み合わせは 2の256乗（およそ10の77乗）通りになります。
+一方で、クレジットカード番号（16桁の番号と3桁のセキュリティコード）の組み合わせ数はおよそ10の19乗通り、アメリカの社会保障番号（9桁）はさらに少ない試行回数で済みます。このように、ビットコインのセキュリティは従来の金融システムと比較して圧倒的に強固であることがわかります。
 
-In the context of cryptography, a problem or calculation is considered “hard” if the best possible method of solving it is a brute force attack. This is because a brute force attack is usually only used when no algorithm or other method can solve the problem.
+暗号学において、ある問題や計算が「困難」と見なされるのは、解決するための最良の方法が総当たり攻撃しか存在しない場合です。総当たり攻撃は、他のアルゴリズムや手法で解決できない問題に対してのみ使用されます。
 
 ---
 コンテンツの著作権は [River Financial](https://river.com/) に帰属します。二次利用の可否は権利者にご確認ください。 / All rights reserved to River Financial.

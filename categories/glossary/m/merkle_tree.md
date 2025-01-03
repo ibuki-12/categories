@@ -13,14 +13,15 @@ taxonomy:
 ## Merkle Tree
 2,100 sats
 
-A Merkle tree is a data structure with unique properties which make it useful for Bitcoin. Merkle trees are used to store all transactions in a given block. The advantage of this system is that one node can easily prove to another that a given transaction was contained in a specific block. This is useful for SPV nodes and light clients, who do not store the entire blockchain and are only interested in certain transactions or blocks.
-For example, if Alice runs a wallet and is waiting for her transaction to confirm, but she does not run a node, she can request a Merkle proof from Bob, who runs a full node. This proof will convince Alice that the transaction she is interested in was included in a valid block, without Bob needing to share all of the transactions or the entire block with Alice.
+マークルツリーとはビットコインで使われる特別な性質を持つデータ構造のことを指し、特定のブロック内に含まれるすべてのトランザクションを効率的かつ安全に管理するために利用されます。このデータ構造によって特定のトランザクションの有効性を迅速に確認でき、ブロック全体の整合性も保証されます。この特性は、ブロックチェーン全体を保存せず、特定のトランザクションやブロックにのみ関心を持つSPVノードやライトクライアントにとって非常に有用です。
 
-From a technical point of view, a Merkle tree has layers. The first layer is the list of all transaction IDs (txids) in a block. To produce the second layer, these txids are concatenated and hashed in pairs using SHA-256. Thus, the second layer will be half as long as the first layer. This process is continued until the last layer contains exactly one hash. This is called the Merkle root. Given the properties of a hash, if a single transaction id is changed, that change will trickle up the tree and change the root hash entirely.
+例えばアリスがウォレットを持っていて、特定のトランザクションの承認を待っていると仮定します。アリスがフルノードを運用していない場合、ボブというフルノード運用者に対して「マークル証明」をリクエストできます。この証明により、ボブが全てのトランザクションやブロック全体を共有しなくても、アリスは自身が確認したいトランザクションが有効なブロックに含まれていることを確かめられます。
+
+技術的には、マークルツリーには複数のレイヤーがあります。最初のレイヤーはそのブロックに含まれるすべてのトランザクションID（txid）のリストです。このtxidのペアを連結してSHA-256でハッシュ化することによって、2番目のレイヤーが生成されます。このレイヤーの要素数は、1つ前のレイヤーの半分になります。このプロセスを繰り返していくと、最後のレイヤーには1つのハッシュだけが残ります。これがマークルルート（Merkle Root）と呼ばれるものです。ハッシュの特性上、1つのtxidが変更されるとその影響がマークルツリー全体に伝播し、マークルルートのハッシュは完全に変化します。
 
 ![](/_images/glossary-ma_1.png)
 
-The advantage of a Merkle tree is that the presence of any given transaction id in a Merkle tree can be proven without revealing the entire Merkle tree. For example, in a Merkle tree with eight transactions, only three hashes must be provided to prove that one of the txids were included in that tree. This provides great efficiency for light clients, which do not store the entire blockchain, and therefore must query other nodes for proof that certain transactions are confirmed.
+マークルツリーの利点は、ツリー全体を明らかにすることなく、特定のトランザクションIDがツリーに含まれていることを証明できる点です。例えば8つのトランザクションが含まれたマークルツリーでは、1つのtxidが含まれていることを証明するために必要なハッシュはわずか3つです。これによってライトクライアントは効率的に機能し、ブロックチェーン全体を保存することなく特定のトランザクションが確認済であることを他のノードに照会できます。
 
 ![](/_images/glossary-ma_2.png)
 
